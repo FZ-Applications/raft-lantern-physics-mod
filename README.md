@@ -1,4 +1,4 @@
-![banner image](banner.jpg)
+![banner image](LanternPhysicsMod/banner.jpg)
 
 # Lantern Physics Mod
 This is a mod for the game Raft, that adds simple physics to the games lanterns.
