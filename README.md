@@ -1,4 +1,4 @@
-![banner image](LanternPhysicsMod/banner.jpg)
+![banner image](banner.jpg)
 
 # Lantern Physics Mod
 This is a mod for the game Raft, that adds simple physics to the games lanterns.
@@ -9,7 +9,7 @@ This is a mod for the game Raft, that adds simple physics to the games lanterns.
 ## Installation 
 ###Via Raft Mod Loader
 1. Install the the Raft Mod Loader: [https://www.raftmodding.com/download](https://www.raftmodding.com/download)
-2. Open the [mod's page](https://www.raftmodding.com/mods/lanternphysics) and click "Install Mod"
+2. Open the [mod's page](https://www.raftmodding.com/mods/lantern-physics) and click "Install Mod"
 
 ###Via Github:
 1. Clone the repository
