@@ -1,14 +1,14 @@
 {
-  "name": "Lantern Physics Mod",
-  "author": "FZ Applications",
-  "description": "Allows the lanterns to swing in the swell of the boat.",
-  "version": "1.0.2",
-  "license": "GNU AGPLv3",
-  "icon": "icon.png",
-  "banner": "banner.jpg",
-  "gameVersion": "13.01",
-  "requiredByAllPlayers": false,
-  "updateUrl": "https://www.raftmodding.com/api/v1/mods/lantern-physics/version.txt",
-  "isModPermanent": false,
-  "excludedFiles": []
+    "requiredByAllPlayers" : false ,
+    "isModPermanent" : false ,
+    "excludedFiles" : [] ,
+    "description" : "Allows the lanterns to swing in the swell of the boat." ,
+    "gameVersion" : "13.01" ,
+    "updateUrl" : "https://www.raftmodding.com/api/v1/mods/lantern-physics/version.txt" ,
+    "version" : "1.0.2" ,
+    "license" : "GNU AGPLv3" ,
+    "banner" : "banner.jpg" ,
+    "author" : "FZ Applications" ,
+    "name" : "Lantern Physics Mod" ,
+    "icon" : "icon.png"
 }
