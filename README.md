@@ -9,7 +9,7 @@
 <br>
 <br>
 
-*A **[Raft]** that adds simple physics to lanterns.*
+*A **[Raft]** mod that adds simple lantern physics.*
 
 <br>
 <br>
