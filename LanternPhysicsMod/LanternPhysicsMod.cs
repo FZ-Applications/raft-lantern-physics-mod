@@ -2,14 +2,16 @@
 
 public class LanternPhysicsMod : Mod
 {
+
+    private enum Action { Load, Unload }
+    
     public void Start() {
         HandleMetalLanterns(Action.Load);
         HandleBasicLanterns(Action.Load);
         Debug.Log("Mod LanternPhysicsMod has been loaded!");
     }
 
-    public void OnModUnload()
-    {
+    public void OnModUnload() {
         HandleMetalLanterns(Action.Unload);
         HandleBasicLanterns(Action.Unload);
         Debug.Log("Mod LanternPhysicsMod has been unloaded!");
@@ -38,10 +40,5 @@ public class LanternPhysicsMod : Mod
         } else if(action == Action.Unload) {
             Destroy(ceilingLantern.GetComponent<LanternBasicPhysics>());
         }
-    }
-    
-    private enum Action {
-        Load,
-        Unload
     }
 }
