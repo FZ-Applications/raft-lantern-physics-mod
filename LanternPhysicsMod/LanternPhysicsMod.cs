@@ -1,68 +1,47 @@
 ﻿using UnityEngine;
 
-public class LanternPhysicsMod : Mod {
-    
-    private enum Action { Unload , Load }
-    
-    public void Start(){
-        
+public class LanternPhysicsMod : Mod
+{
+    public void Start() {
         HandleMetalLanterns(Action.Load);
         HandleBasicLanterns(Action.Load);
-        
         Debug.Log("Mod LanternPhysicsMod has been loaded!");
     }
 
-    public void OnModUnload(){
-        
+    public void OnModUnload()
+    {
         HandleMetalLanterns(Action.Unload);
         HandleBasicLanterns(Action.Unload);
-        
         Debug.Log("Mod LanternPhysicsMod has been unloaded!");
     }
     
-    
-    private void HandleMetalLanterns(Action action){
-        
+    private void HandleMetalLanterns(Action action) {
         Item_Base metalLantern = ItemManager.GetItemByName("Placeable_Lantern_Metal");
-        Block [] lanternPrefabs = metalLantern.settings_buildable.GetBlockPrefabs();
-        
+        Block[] lanternPrefabs = metalLantern.settings_buildable.GetBlockPrefabs();
         GameObject ceilingLantern = lanternPrefabs[1].gameObject;
         GameObject wallLantern = lanternPrefabs[2].gameObject;
-        
-        switch(action){
-        case Action.Load :
-            
+        if (action == Action.Load) {
             ceilingLantern.AddComponent<LanternMetalPhysics>();
             wallLantern.AddComponent<LanternMetalPhysics>();
-            
-            break;
-        case Action.Unload :
-            
+        } else if(action == Action.Unload) {
             Destroy(ceilingLantern.GetComponent<LanternMetalPhysics>());
             Destroy(wallLantern.GetComponent<LanternMetalPhysics>());
-        
-            break;
         }
     }
     
-    
-    private void HandleBasicLanterns(Action action){
-        
+    private void HandleBasicLanterns(Action action) {
         Item_Base basicLantern = ItemManager.GetItemByName("Placeable_Lantern_Basic");
-        Block [] lanternPrefabs = basicLantern.settings_buildable.GetBlockPrefabs();
+        Block[] lanternPrefabs = basicLantern.settings_buildable.GetBlockPrefabs();
         GameObject ceilingLantern = lanternPrefabs[1].gameObject;
-        
-        switch(action){
-        case Action.Load :
-            
+        if (action == Action.Load) {
             ceilingLantern.AddComponent<LanternBasicPhysics>();
-            
-            break;
-        case Action.Unload :
-            
+        } else if(action == Action.Unload) {
             Destroy(ceilingLantern.GetComponent<LanternBasicPhysics>());
-        
-            break;
         }
+    }
+    
+    private enum Action {
+        Load,
+        Unload
     }
 }
