@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 
-public class LanternPhysicsMod : Mod
-{
+public class LanternPhysicsMod : Mod {
 
     private enum Action { Load, Unload }
     
